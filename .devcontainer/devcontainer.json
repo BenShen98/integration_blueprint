@@ -1,12 +1,15 @@
 // See https://aka.ms/vscode-remote/devcontainer.json for format details.
 {
-	"image": "ghcr.io/ludeeus/devcontainer/integration:stable",
+	// "image": "ghcr.io/ludeeus/devcontainer/integration:stable",
+	// "image": "ghcr.io/ludeeus/devcontainer/python:stable",
+	"image": "mcr.microsoft.com/vscode/devcontainers/python:0-3.9",
 	"name": "Blueprint integration development",
 	"context": "..",
 	"appPort": [
 		"9123:8123"
 	],
-	"postCreateCommand": "postCreate.bash",
+	"mounts": ["type=volume,src=ha_config,target=/config"],
+	"postCreateCommand": "${containerWorkspaceFolder}/.devcontainer/postCreate.bash",
 	"extensions": [
 		"ms-python.python",
 		"github.vscode-pull-request-github",

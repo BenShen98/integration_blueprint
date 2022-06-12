@@ -1,11 +1,11 @@
 {
 	"folders": [
 		{
-			"name": "component__blueprint",
+			// "name": "component__blueprint",
 			"path": ".."
 		},
 		{
-			"name": "component__pyscript",
+			// "name": "component__pyscript",
 			"path": "../../pyscript"
 		},
 		{
@@ -15,7 +15,7 @@
 		{
 			"name": "ha__src",
 			// "path": "../../homeassistant",
-			"path": "/usr/local/python/lib/python3.10/site-packages/homeassistant"
+			"path": "/usr/local/lib/python3.9/site-packages/homeassistant"
 		}
 
 	],
