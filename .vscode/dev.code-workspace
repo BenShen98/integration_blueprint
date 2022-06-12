@@ -4,10 +4,10 @@
 			// "name": "component__blueprint",
 			"path": ".."
 		},
-		{
-			// "name": "component__pyscript",
-			"path": "../../pyscript"
-		},
+		// {
+		// 	// "name": "component__pyscript",
+		// 	"path": "../../pyscript"
+		// },
 		{
 			"name": "ha__config",
 			"path": "/config"

@@ -2,15 +2,30 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Run Home Assistant on port 9123",
+            "label": "Run HA",
             "type": "shell",
-            "command": "hass -c ~/config",
+            "command": "hass -c /config",
+            "group": "test",
+            "dependsOn": ["HA Check Config"],
             "problemMatcher": []
         },
         {
-            "label": "Home Assistant Check Config",
+            "label": "HA Check Config",
             "type": "shell",
-            "command": "hass -c ~/config --script check_config"
+            "command": "hass -c /config --script check_config",
+            "problemMatcher": []
+        },
+        {
+            "label": "Notebook start",
+            "type": "shell",
+            "command": "jupyter notebook --allow-root  /workspaces/notebooks/pyscript_tutorial.ipynb",
+            "group": "test",
+            "problemMatcher": []
+        },
+        {
+            "label": "ALL",
+            "dependsOn": ["Run HA", "Notebook start"],
+            "problemMatcher": []
         }
     ]
 }
